@@ -97,12 +97,18 @@ Test this function by hand in the console to get it working, and when you think 
 var testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-
+  var sumarrays = sum(sumArr[0], sumArr[1]);
+  var sumtota = sum(sumarrays[0], sumArr[2]);
+  // var sumtotal = sumArr(sumarray[0], [2]);
+  var stringtotal = `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${sumtota[0]} is their sum.`
+  var totalsum = [sumtota[0], stringtotal];
+  console.log(totalsum);
+  return totalsum;
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
