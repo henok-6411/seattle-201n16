@@ -57,15 +57,24 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 //eslint-disable-line
 function sumAndMultiply(a, b, c) {
-  var add = sum(a, b); // [11, 'string']
-  console.log(add[0]);
-  var multiAdd = sum(add[0], c)
-  console.log(multiAdd)
-  var multi = a * b * c;
-  var totalsum = a + ' and ' + b + ' and ' + c + ' sum  to ' + sum + '.';
-  var totalmulti = 'The product of ' + a + 'and' + b + ' and ' + c + 'is' + multi + '.';
-  return totalsumarray = [sum, multi, totalsum, totalmulti];
+  var addAB = sum(a, b); // [11, 'string']
+  var totalsum = sum(addAB[0], c);
 
+  var sumstring = `${a} and ${b} and ${c} sum to ${totalsum[0]}.`
+  // var sumstringarray = [totalsum, sumstring];
+
+  var multiplyAB = multiply(a, b)
+  var totalmulti = multiply(multiplyAB[0], c);
+
+  var stringmultiplication = `The product of ${a} and ${b} and ${c} is ${totalmulti[0]}.`
+
+  //var multiplyArray = [totalmulti, stringmultiplication];
+
+  var result = [totalsum[0], totalmulti[0], sumstring, stringmultiplication];
+  console.log(result);
+  return result;
+
+  //var sumstringarray = [stringarray[0] , sumstring];
 
 }
 
